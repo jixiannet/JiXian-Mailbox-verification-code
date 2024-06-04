@@ -26,9 +26,9 @@ def send_verification_code(email_to, smtp_server, smtp_port, username, password)
     msg = MIMEMultipart()
     msg['From'] = username
     msg['To'] = email_to
-    msg['Subject'] = "Your Verification Code"
+    msg['Subject'] = "【即现网络】你的验证码"
 
-    body = f"Your verification code is: {verification_code}. Please keep it safe."
+    body = f"你的验证码是: {verification_code}. 请不要泄露该验证码，我们的工作人员不会向您索要。"
     msg.attach(MIMEText(body, 'plain'))
 
     try:
